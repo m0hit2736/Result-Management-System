@@ -1,0 +1,31 @@
+<div class="teachLog">
+  <h3>Teacher Login</h3>
+  <a href="/" class="btn btn-info AB">Back</a>
+
+  <form method="POST" class="teachForm">
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password : </label>
+      <input type="password" name="password" class="form-control" id="pass">
+      <br>
+      <% if (typeof error !=='undefined' ) { %>
+        <p class="not-found-content">
+          <%= error %>
+        </p>
+        <% } %>
+          <input type="checkbox" style="width: 30px;" onclick="myFunction()">Show Password
+          <br>
+    </div>
+    <a><button type="submit" class="btn btn-primary AB">Submit</button></a>
+  </form>
+</div>
+<script>
+  function myFunction() {
+    var x = document.getElementById("pass");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
+</script>
